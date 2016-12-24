@@ -1,0 +1,17 @@
+registry:
+  restart: always
+  image: registry
+  ports:
+    - 80:5000
+  environment:
+    # REGISTRY_HTTP_TLS_CERTIFICATE: /certs/domain.crt
+    # REGISTRY_HTTP_TLS_KEY: /certs/domain.key
+    REGISTRY_AUTH: htpasswd
+    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+  volumes:
+    - /srv/docker_registry/data:/var/lib/registry
+    - /srv/docker_registry/auth:/auth
+# - /srv/docker_registry/certs:/certs
+    
+# replace /srv/docker_registry/ by whatever directory that holds your data, certs and auth folder from above.
