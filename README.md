@@ -1,6 +1,6 @@
-<h1> Private Docker Registry </h1>
+<h1>Private Docker Registry</h1>
 
-<h2> Setting up a private Docker Registry </h2>
+<h2>Setting up a private Docker Registry</h2>
 <h3>Description</h3>
 
 <p>These scripts can help you run the Docker Registry latest implementation for storing and distributing Docker images in your own linux hosts.</P>
