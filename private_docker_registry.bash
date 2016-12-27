@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #
 # The path to install registry
 #
@@ -5,9 +6,9 @@ YOUR_PATH=/srv/docker_registry
 #
 # Make required directories
 #
-sudo mkdir -p $YOUR_PATH/data
-sudo mkdir -p $YOUR_PATH/auth
-sudo mkdir -p $YOUR_PATH/certs
+sudo mkdir -p ${YOUR_PATH}/data
+sudo mkdir -p ${YOUR_PATH}/auth
+sudo mkdir -p ${YOUR_PATH}/certs
 #
 # Create a password file for basic authentication 
 #
