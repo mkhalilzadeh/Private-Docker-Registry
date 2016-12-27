@@ -33,6 +33,17 @@
 # Using the private_docker_registry.conf in this script
 source ./private_docker_registry.conf
 
+# Checks if the user is root or not.
+ROOT_UID=0     # Only users with $UID 0 have root privileges.
+E_NOTROOT=87   # Non-root exit error.
+if [ $UID -ne ${ROOT_UID} ]
+then
+  echo "Please run as root."
+  exit ${E_NOTROOT}
+else
+  echo "The user is root."
+fi
+
 # Test whether the required directories has been created.
 if [ -d ${YOUR_PATH}/auth/ ]
    then echo auth directory in ${YOUR_PATH} is created.
