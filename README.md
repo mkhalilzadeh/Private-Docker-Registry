@@ -1,5 +1,5 @@
 # Private-Docker-Registry
-Setting up a private Docker registry
+# Setting up a private Docker registry
 # Put .bash and .yml files in same directory.
 # Change YOUR_PATH, USER_NAME and PASSWORD in .bash file to your prefered values.
 # Run the "sudo chmod +x private_docker_registry.bash" if it's required.
